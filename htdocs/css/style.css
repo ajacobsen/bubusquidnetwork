@@ -1,0 +1,187 @@
+@font-face {
+    font-family: nick;
+    src: url("/font/Galano Grotesque Black.otf");
+}
+
+@font-face {
+	font-family: cn;
+	src: url("/font/CN Bold.ttf");
+}
+
+@font-face {
+	font-family: mundonick;
+	src: url("/font/MUNDONICK.ttf");
+}
+
+#indexHeader {
+	font-family: nick;
+	text-align: center;
+	color: white!important;
+}
+
+.index-card {
+	width: 350px;
+}
+
+#brand {
+	font-family: mundonick;
+	font-size: 48px;
+	/*color: rgb(244,109,37);*/
+	color: white;
+	margin-right: 10px;
+}
+
+#brand:hover {
+	text-decoration: inherit;
+}
+
+#show-info {
+	/*background-color: rgb(0, 0, 0);*/
+	background: url("/images/bg2.png");
+	color: purple;
+}
+
+.bg-dark {
+	background-color: rgb(244,109,37)!important;
+}
+
+.bg-dark:hover {
+	/*background-color: rgb(209, 209, 209)!important;*/
+	background-color: rgb(255, 88, 0)!important;
+}
+
+.selected-show, .selected-show:hover {
+	/*background-color: rgb(244,0,0)!important;*/
+	background-color: transparent!important;
+	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
+}
+
+.selected-show {
+	/*background-color: rgb(244,0,0)!important;*/
+	background-color: transparent!important;
+	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
+}
+
+#show-info h5 {
+	font-family: cn;
+}
+
+#show-description {
+	font-size: 0.7rem;
+}
+
+#characters {
+	font-size: 0.7rem;
+}
+
+#characters li {
+	margin-right: 0px;
+}
+
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("/images/bg.png");
+  /*background-repeat: repeat-y!important;*/
+
+  /* Full height */
+  /*height: 100%;*/
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+.navbar {
+	padding-bottom: 0px;
+	margin-bottom: 8px;
+}
+
+.nav-link {
+	font-family: nick;
+	font-size: 24px;
+	color: white;
+}
+
+.footer-copyright {
+	font-family: nick;
+	color: white;
+}
+
+.bg-nav {
+	background-color: rgb(244,109,37)!important;
+}
+
+/*GAMES FORM CN*/
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-box-outer-iframe-wrapper {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 93.95161%;
+    padding-bottom: 60.8871%;
+    position: absolute;
+    top: 9.8338%;
+    left: 3.02419%;
+    overflow: hidden;
+}
+
+.game-box-inner-iframe-container {
+    position: absolute;
+    width: 95.27897%;
+    padding-bottom: 60.30043%;
+}
+
+.game-box-inner-iframe, .game-box-inner-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center-vertical-translate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.box-content-container {
+    padding-bottom: 722px;
+    padding-top: 0;
+    margin-bottom: 10px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
+.box-container {
+    border-radius: 15px;
+    padding: 5px 0;
+}
+
+/*.c-blue.box-container {
+    background-color: #0098d8;
+}*/
+
+.grid {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+}

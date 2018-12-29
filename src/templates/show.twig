@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<div>
+  <img src="/images/show_banners/{{ name }}-banner.png" class="img-fluid">
+</div>
+<div id="show-info">
+  <div class="row">
+    <div class="col-sm">
+      <h5 class="mx-5">{{ title }}</h5>
+      <p id="show-description" class="mx-4">
+        {{ description }}
+      </p>
+    </div>
+    <div class="col-sm">
+      <h5 class="mx-4">Characters</h5>
+      <ul id="characters" class="list-inline mx-4">
+      {% for char in characters %}
+        <li class="list-inline-item" data-toggle="tooltip" data-placement="bottom" title="{{ char.name }}">
+          <img src="/images/char_icons/{{ char.icon }}">
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
