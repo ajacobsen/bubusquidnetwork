@@ -1,0 +1,10 @@
+/* SHOW SELECTOR */
+#show-selector {
+    margin-bottom: 50px;
+}
+
+.selected-show, .selected-show:hover {
+	background-color: transparent!important;
+	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
+}
+/* END SHOW SELECTOR */

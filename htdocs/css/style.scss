@@ -1,0 +1,121 @@
+@import 'fonts';
+
+$color-nick: rgb(244,109,37);
+$color-nick-hover: rgb(255, 88, 0);
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+body, html {
+  height: 100%;
+  font-family: nick;
+  color: white;
+}
+
+.bg-orange {
+    background-color: $color-nick!important;
+    &:hover {
+        background-color: $color-nick-hover!important;
+    }
+}
+
+.site-bg {
+  background-image: url("/images/bg.png");
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+@import 'navbar';
+
+@import 'index';
+
+@import 'showinfo';
+
+@import 'showselector';
+
+@import 'episodecards';
+
+
+/* SHOW LIST */
+.showlist-item a {
+    text-decoration: none;
+}
+/* END SHOW LIST */
+
+
+
+
+/*GAMES FORM CN*/
+
+/*iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-box-outer-iframe-wrapper {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 93.95161%;
+    padding-bottom: 60.8871%;
+    position: absolute;
+    top: 9.8338%;
+    left: 3.02419%;
+    overflow: hidden;
+}
+
+.game-box-inner-iframe-container {
+    position: absolute;
+    width: 95.27897%;
+    padding-bottom: 60.30043%;
+}
+
+.game-box-inner-iframe, .game-box-inner-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center-vertical-translate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.box-content-container {
+    padding-bottom: 722px;
+    padding-top: 0;
+    margin-bottom: 10px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
+.box-container {
+    border-radius: 15px;
+    padding: 5px 0;
+}
+
+.c-blue.box-container {
+    background-color: #0098d8;
+}
+
+.grid {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+}*/

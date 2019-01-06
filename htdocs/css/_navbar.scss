@@ -1,0 +1,27 @@
+/* NAV BAR */
+.brand {
+	font-family: mundonick;
+	font-size: 48px;
+	color: white;
+	margin-right: 10px;
+    &:hover {
+    	text-decoration: inherit;
+        color: white;
+    }
+}
+
+
+.navbar {
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    font-size: 24px;
+    color: white;
+}
+
+.bg-nav {
+    background-color: $color-nick!important;
+}
+/* END NAV BAR */

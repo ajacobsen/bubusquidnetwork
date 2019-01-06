@@ -1,37 +1,31 @@
+@font-face {
+  font-family: nick;
+  src: url("/font/Galano Grotesque Black.otf");
+}
+@font-face {
+  font-family: cn;
+  src: url("/font/CN Bold.ttf");
+}
+@font-face {
+  font-family: mundonick;
+  src: url("/font/MUNDONICK.ttf");
+}
 @media (min-width: 1920px) {
-    .container {
-        max-width: 1600px;
-    }
+  .container {
+    max-width: 1600px;
+  }
 }
-
-@font-face {
-    font-family: nick;
-    src: url("/font/Galano Grotesque Black.otf");
-}
-
-@font-face {
-	font-family: cn;
-	src: url("/font/CN Bold.ttf");
-}
-
-@font-face {
-	font-family: mundonick;
-	src: url("/font/MUNDONICK.ttf");
-}
-
 body, html {
   height: 100%;
   font-family: nick;
   color: white;
 }
 
-/* COMMON CLASSES */
 .bg-orange {
-    background-color: rgb(244,109,37)!important;
+  background-color: #f46d25 !important;
 }
-
 .bg-orange:hover {
-    background-color: rgb(255, 88, 0)!important;
+  background-color: #ff5800 !important;
 }
 
 .site-bg {
@@ -40,141 +34,118 @@ body, html {
   background-repeat: repeat-y;
   background-size: cover;
 }
-/* END COMMON CLASSES */
-
-
-/* INDEX.PHP */
-.index-header {
-	text-align: center;
-	/*color: white!important;*/
-}
-
-.index-card {
-	width: 350px;
-}
-/* END INDEX.PHP */
-
 
 /* NAV BAR */
 .brand {
-	font-family: mundonick;
-	font-size: 48px;
-	color: white;
-	margin-right: 10px;
+  font-family: mundonick;
+  font-size: 48px;
+  color: white;
+  margin-right: 10px;
 }
-
-.navbar-brand:hover {
-	text-decoration: inherit;
-    color: white;
+.brand:hover {
+  text-decoration: inherit;
+  color: white;
 }
 
 .navbar {
-    padding-bottom: 0px;
-    margin-bottom: 8px;
+  padding-bottom: 0px;
+  margin-bottom: 8px;
 }
 
 .nav-link {
-    font-size: 24px;
-    color: white;
+  font-size: 24px;
+  color: white;
 }
 
 .bg-nav {
-    background-color: rgb(244,109,37)!important;
+  background-color: #f46d25 !important;
 }
+
 /* END NAV BAR */
+/*  INDEX.PHP START */
+.index-header {
+  text-align: center;
+}
 
+.index-card {
+  width: 350px;
+}
 
+/* INDEX.PHP END */
 /* SHOW INFO */
 #show-info {
-	background: url("/images/bg2.png");
-	color: purple;
+  background: url("/images/bg2.png");
+  color: purple;
 }
-
 #show-info h5 {
-    font-family: cn;
+  font-family: cn;
 }
 
 #show-description {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 #characters {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
-
 #characters li {
-    margin-right: 0px;
+  margin-right: 0px;
 }
- /* END SHOW INFO */
 
-
+/* END SHOW INFO */
 /* SHOW SELECTOR */
 #show-selector {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .selected-show, .selected-show:hover {
-	background-color: transparent!important;
-	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
+  background-color: transparent !important;
+  background: url("/images/show_icons/splat.png") 0px 10px/80px no-repeat;
 }
+
 /* END SHOW SELECTOR */
-
-
 /* EPISODE CARDS */
 .episode-card {
-    background-color: rgb(244,109,37);
-    padding: 1em;
-    margin: 1em;
-    transition: transform .5s ease;
+  background-color: #f46d25;
+  padding: 1em;
+  margin: 1em;
+  transition: transform 0.5s ease;
 }
-
 .episode-card:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    transition: transform .5s ease;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .episode-card:hover .episode-card-title {
-    opacity: 1;
+  opacity: 1;
 }
 
 .episode-card-title {
-    position: absolute; 
-    bottom: 0;
-    left: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: opacity .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }
-
-/* FOOTER */
-.footer-copyright {
-	/*font-family: nick;*/
-	/*color: white;*/
-}
-/* END FOOTER */
-
 
 /* SHOW LIST */
 .showlist-item a {
-    text-decoration: none;
-    /*color: white;*/
+  text-decoration: none;
 }
+
 /* END SHOW LIST */
-
-
-
-
 /*GAMES FORM CN*/
-
 /*iframe {
     position: absolute;
     top: 0;
@@ -243,3 +214,5 @@ body, html {
     max-width: 992px;
     margin: 0 auto;
 }*/
+
+/*# sourceMappingURL=style.css.map */

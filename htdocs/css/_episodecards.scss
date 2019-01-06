@@ -1,0 +1,34 @@
+/* EPISODE CARDS */
+.episode-card {
+    background-color: $color-nick;
+    padding: 1em;
+    margin: 1em;
+    transition: transform .5s ease;
+    &:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        transition: transform .5s ease;
+    }
+}
+
+
+.episode-card:hover .episode-card-title {
+    opacity: 1;
+}
+
+.episode-card-title {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: opacity .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
