@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+<a style="font-family: nick; text-decoration: none;" href="/episodes/{{ episode.showname }}">BACK TO THE EPISODE LIST</a>
+
+<div class="embed-responsive embed-responsive-16by9">
+
+	{% if episode.source == 'kisscartoon' %}
+		<iframe class="embed-responsive-item" src="{{ episode.url }}" width="900" height="552" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+	{% endif %}
+
+	{% if episode.source == 'youtube' %}
+		<iframe class="embed-responsive-item" width="560" height="315" src="{{ episode.url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endif %}
+
+</div>
+
+</div>
+
+{% endblock body %}

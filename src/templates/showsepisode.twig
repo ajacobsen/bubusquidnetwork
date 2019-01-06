@@ -1,0 +1,18 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+<div class="row">
+	{% for show in shows %}
+		<div class="col-4 showlist-item my-2">
+		<a href="/episodes/{{ show.name }}">
+			<img class="img-fluid showlist-card rounded" src="/images/show_cards/spongebob.png">
+		</a>
+		</div>
+	{% endfor %}
+</div>
+
+</div>
+{% endblock body %}

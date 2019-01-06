@@ -19,111 +19,163 @@
 	src: url("/font/MUNDONICK.ttf");
 }
 
-#indexHeader {
-	font-family: nick;
+body, html {
+  height: 100%;
+  font-family: nick;
+  color: white;
+}
+
+/* COMMON CLASSES */
+.bg-orange {
+    background-color: rgb(244,109,37)!important;
+}
+
+.bg-orange:hover {
+    background-color: rgb(255, 88, 0)!important;
+}
+
+.site-bg {
+  background-image: url("/images/bg.png");
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+/* END COMMON CLASSES */
+
+
+/* INDEX.PHP */
+.index-header {
 	text-align: center;
-	color: white!important;
+	/*color: white!important;*/
 }
 
 .index-card {
 	width: 350px;
 }
+/* END INDEX.PHP */
 
-#brand {
+
+/* NAV BAR */
+.brand {
 	font-family: mundonick;
 	font-size: 48px;
-	/*color: rgb(244,109,37);*/
 	color: white;
 	margin-right: 10px;
 }
 
-#brand:hover {
+.navbar-brand:hover {
 	text-decoration: inherit;
+    color: white;
 }
 
+.navbar {
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    font-size: 24px;
+    color: white;
+}
+
+.bg-nav {
+    background-color: rgb(244,109,37)!important;
+}
+/* END NAV BAR */
+
+
+/* SHOW INFO */
 #show-info {
-	/*background-color: rgb(0, 0, 0);*/
 	background: url("/images/bg2.png");
 	color: purple;
 }
 
-.bg-dark {
-	background-color: rgb(244,109,37)!important;
-}
-
-.bg-dark:hover {
-	/*background-color: rgb(209, 209, 209)!important;*/
-	background-color: rgb(255, 88, 0)!important;
-}
-
-.selected-show, .selected-show:hover {
-	/*background-color: rgb(244,0,0)!important;*/
-	background-color: transparent!important;
-	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
-}
-
-.selected-show {
-	/*background-color: rgb(244,0,0)!important;*/
-	background-color: transparent!important;
-	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
-}
-
 #show-info h5 {
-	font-family: cn;
+    font-family: cn;
 }
 
 #show-description {
-	font-size: 0.7rem;
+    font-size: 0.7rem;
 }
 
 #characters {
-	font-size: 0.7rem;
+    font-size: 0.7rem;
 }
 
 #characters li {
-	margin-right: 0px;
+    margin-right: 0px;
+}
+ /* END SHOW INFO */
+
+
+/* SHOW SELECTOR */
+#show-selector {
+    margin-bottom: 50px;
 }
 
-body, html {
-  height: 100%;
+.selected-show, .selected-show:hover {
+	background-color: transparent!important;
+	background: url("/images/show_icons/splat.png") 0px 10px/80px  no-repeat;
 }
-.bg {
-  /* The image used */
-  background-image: url("/images/bg.png");
-  /*background-repeat: repeat-y!important;*/
+/* END SHOW SELECTOR */
 
-  /* Full height */
-  /*height: 100%;*/
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat-y;
-  background-size: cover;
+/* EPISODE CARDS */
+.episode-card {
+    background-color: rgb(244,109,37);
+    padding: 1em;
+    margin: 1em;
+    transition: transform .5s ease;
 }
 
-.navbar {
-	padding-bottom: 0px;
-	margin-bottom: 8px;
+.episode-card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: transform .5s ease;
 }
 
-.nav-link {
-	font-family: nick;
-	font-size: 24px;
-	color: white;
+.episode-card:hover .episode-card-title {
+    opacity: 1;
 }
 
+.episode-card-title {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: opacity .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
 .footer-copyright {
-	font-family: nick;
-	color: white;
+	/*font-family: nick;*/
+	/*color: white;*/
 }
+/* END FOOTER */
 
-.bg-nav {
-	background-color: rgb(244,109,37)!important;
+
+/* SHOW LIST */
+.showlist-item a {
+    text-decoration: none;
+    /*color: white;*/
 }
+/* END SHOW LIST */
+
+
+
 
 /*GAMES FORM CN*/
 
-iframe {
+/*iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -182,12 +234,12 @@ iframe {
     padding: 5px 0;
 }
 
-/*.c-blue.box-container {
+.c-blue.box-container {
     background-color: #0098d8;
-}*/
+}
 
 .grid {
     width: 100%;
     max-width: 992px;
     margin: 0 auto;
-}
+}*/

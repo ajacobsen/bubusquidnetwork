@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<img src="/images/show_banners/{{ pageTitle }}-banner.png" class="img-fluid mb-2">
+
+<div class="container">
+
+<div class="row my-2">
+{% for episode in episodes %}
+	<div class="col-4 rounded episode-card">
+		<div class="episode-card-body">
+			<a href="/episodes/{{ episode.showname }}/{{ episode.code }}">
+			{% if episode.source == 'youtube' %}
+				<img class="img-fluid rounded" src="{{ episode.thumbnail }}">
+			{% else %}
+				{{ episode.code }}
+			{% endif %}
+			</a>
+			<div class="episode-card-title">{{ episode.title }}</div>
+		</div>
+	</div>
+{% endfor %}
+</div>
+
+</div>
+
+{% endblock body %}

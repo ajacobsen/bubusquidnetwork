@@ -45,6 +45,27 @@ class Database {
 		return $stmt->fetch();
 	}
 
+	public function getShows() {
+		$sql = 'SELECT * FROM shows';
+		$stmt = $this->$pdo->prepare($sql);
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
+
+	public function getEpisodesFromShow($showname) {
+		$sql = 'SELECT * FROM episodes WHERE showname = :showname';
+		$stmt = $this->$pdo->prepare($sql);
+		$stmt->execute(['showname' => $showname]);
+		return $stmt->fetchAll();
+	}
+
+	public function getEpisode($code, $showname) {
+		$sql = 'SELECT * FROM episodes WHERE code = :code AND showname = :showname';
+		$stmt = $this->$pdo->prepare($sql);
+		$stmt->execute(['code' => $code, 'showname' => $showname]);
+		return $stmt->fetch();
+	}
+
 	public function getCharacters($ids) {
 		$inQuery = implode(',', array_fill(0, count($ids), '?'));
 		$stmt = $this->$pdo->prepare(

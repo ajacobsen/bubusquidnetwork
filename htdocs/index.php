@@ -8,11 +8,19 @@ require_once '../vendor/autoload.php';
 use App\Controller\IndexController;
 use App\Controller\ShowController;
 use App\Controller\GameController;
+use App\Controller\EpisodeController;
+use App\Controller\EpisodesController;
+use App\Controller\ShowsEpisodeController;
+
+opcache_reset();
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-	$r->addRoute('GET', '/', new IndexController);
-    $r->addRoute('GET', '/shows/{name}', new ShowController);
-    $r->addRoute('GET', '/games/{name}', new GameController);
+	$r->addRoute('GET', '/', IndexController::class);
+    $r->addRoute('GET', '/shows/{name}', ShowController::class);
+    $r->addRoute('GET', '/games/{name}', GameController::class);
+    $r->addRoute('GET', '/episodes', ShowsEpisodeController::class);
+    $r->addRoute('GET', '/episodes/{name}', EpisodesController::class);
+    $r->addRoute('GET', '/episodes/{name}/{episode}', EpisodeController::class);
 });
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
@@ -37,7 +45,7 @@ switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
         $vars = $routeInfo[2];
-        $handler->handleRequest($vars);
+        $h = new $handler;
+        $h->handleRequest($vars);
         break;
 }
-
