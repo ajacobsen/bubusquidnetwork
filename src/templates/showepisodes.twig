@@ -8,7 +8,7 @@
 
 <div class="row my-2">
 {% for episode in episodes %}
-	<div class="col-4 rounded episode-card">
+	<div class="col-4 rounded episode-card text-center">
 		<div class="episode-card-body">
 			<a href="/episodes/{{ episode.showname }}/{{ episode.code }}">
 			{% if episode.source == 'youtube' %}
