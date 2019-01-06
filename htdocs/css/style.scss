@@ -41,9 +41,36 @@ body, html {
 
 
 /* SHOW LIST */
-.showlist-item a {
-    text-decoration: none;
+.showlist {
+    margin-top: 50px;
 }
+.showlist-item {
+    margin-top: 30px;
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 500ms ease;
+    }
+}
+
+.showlist-item-title {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    // background: rgb(0, 0, 0);
+    // background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    // transition: opacity .5s ease;
+    // opacity:1;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
 /* END SHOW LIST */
 
 

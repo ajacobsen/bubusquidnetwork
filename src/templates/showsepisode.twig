@@ -4,12 +4,13 @@
 
 <div class="container">
 
-<div class="row">
+<div class="row showlist">
 	{% for show in shows %}
-		<div class="col-4 showlist-item my-2">
-		<a href="/episodes/{{ show.name }}">
-			<img class="img-fluid showlist-card rounded" src="/images/show_cards/spongebob.png">
-		</a>
+		<div class="col-4 showlist-item">
+			<a href="/episodes/{{ show.name }}">
+				<img class="img-fluid showlist-card rounded" src="/images/show_cards/bg.png">
+			</a>
+			<div class='showlist-item-title'>{{ show.title }}</div>
 		</div>
 	{% endfor %}
 </div>
