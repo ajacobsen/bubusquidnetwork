@@ -1,6 +1,35 @@
 /*  INDEX.PHP START */
 .index-header {
 	text-align: center;
+	font-size: 1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.index-header {
+		font-size: 1rem;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.index-header {
+		font-size: 1.5rem;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.index-header {
+		font-size: 2rem;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.index-header {
+		font-size: 2.5rem;
+	}
 }
 
 .index-card {

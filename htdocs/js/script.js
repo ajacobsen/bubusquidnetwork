@@ -7,3 +7,10 @@ function enableOnClick() {
 	}
 }
 window.onload=enableOnClick;
+
+fontsize = function () {
+    var fontSize = $("#showlist-item").width() * 0.10; // 10% of container width
+    $("#showlist-item a").css('font-size', fontSize);
+};
+$(window).resize(fontsize);
+$(document).ready(fontsize);
