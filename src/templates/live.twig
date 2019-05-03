@@ -1,0 +1,16 @@
+{% extends 'base_showselector.twig' %}
+
+{% block head %}
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<div class="text-center">
+		<div id="player"></div>
+		<script>
+			var player = new Clappr.Player({source: "http://your.video/here.mp4", parentId: "#player"});
+		</script>
+	</div>
+</div>
+{% endblock %}

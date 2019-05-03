@@ -11,6 +11,7 @@ use App\Controller\GameController;
 use App\Controller\EpisodeController;
 use App\Controller\EpisodesController;
 use App\Controller\ShowsEpisodeController;
+use App\Controller\LiveController;
 
 opcache_reset();
 
@@ -21,6 +22,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/episodes', ShowsEpisodeController::class);
     $r->addRoute('GET', '/episodes/{name}', EpisodesController::class);
     $r->addRoute('GET', '/episodes/{name}/{episode}', EpisodeController::class);
+    $r->addRoute('GET', '/live', LiveController::class);
 });
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
