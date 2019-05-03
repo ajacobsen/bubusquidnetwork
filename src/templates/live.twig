@@ -1,45 +1,54 @@
 {% extends 'base_showselector.twig' %}
 
 {% block head %}
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/video-dev/clappr-rtmp-plugin@latest/dist/rtmp.min.js"></script>
+	<script type="text/javascript" src="player/js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="player/js/majhdwplayer.js?xxx"></script>
+	<script type="text/javascript" src="player/js/html5.hdwplayer.js"></script>
+	<link rel="stylesheet" href="player/css/html5.hdwstyles.css" type="text/css" media="all">
+	<style>
+	@media only screen  and (min-width: 100px) and (max-width: 680px){
+		#player{
+			width: 100% !important;
+			height: 230px !important;
+		}
+	}
+
+	@media only screen  and (min-width: 768px) and (max-width: 979px){
+		#player{
+			width: 100% !important;
+			height: 320px !important;
+		}
+	}
+
+	</style>
 {% endblock %}
 
 {% block body %}
 <div class="container">
-	<div class="text-center">
-		<div id="player"></div>
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm">
+		<div id="player" {# class="hdwhtml5player" style="height:360px; width:640px;" #}></div>
 		<script>
-			var player = new Clappr.Player({
-			    source: "rtmp://localhost:63716/live/test",
-			    parentId: "#player",
-			    plugins: {'playback': [RTMP]},
-			    rtmpConfig: {
-			        swfPath: 'dist/assets/RTMP.swf',
-			        scaling:'stretch',
-			        playbackType: 'live',
-			        bufferTime: 1,
-			        startLevel: 0,
-			        switchRules: {
-			            "SufficientBandwidthRule": {
-			                "bandwidthSafetyMultiple": 1.15,
-			                "minDroppedFps": 2
-			            },
-			            "InsufficientBufferRule": {
-			                "minBufferLength": 2
-			            },
-			            "DroppedFramesRule": {
-			                "downSwitchByOne": 10,
-			                "downSwitchByTwo": 20,
-			                "downSwitchToZero": 24
-			            },
-			            "InsufficientBandwidthRule": {
-			                "bitrateMultiplier": 1.15
-			            }
-			        }
-			    },
+		$j(document).ready(function(){	
+			hdwplayer({ 
+				id       : 'player',
+				swf      : 'player/player.swf?api=true',
+				width    : '705',
+				height   : '400',
+				type	 : 'rtmp',
+				streamer: "rtmp://mensa.uberspace.de:63716/live",
+				video: "test",
+				// license  : 'O1DML-1487-N2MMA-01982-MLONW-8551-OO23G', //license key for localhost
+				// logo     : 'http://localhost/images/logo.png',
+				autoStart: 'true',
+				// skinMode: 'static',
 			});
+			
+		});
 		</script>
+		</div>
+		<div class="col-sm"></div>
 	</div>
 </div>
 {% endblock %}
